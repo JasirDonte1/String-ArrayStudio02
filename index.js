@@ -8,17 +8,22 @@ let protoArray4 = "Comma-spaces, might, require, typing, caution";
 strings = [protoArray1, protoArray2, protoArray3, protoArray4];
 
 //a) Use the 'includes' method to check to see if the words in each string are separated by commas (,), semicolons (;) or just spaces.
-let str = protoArray4;
+let str = protoArray1;
 //input.question();
-if (str.includes(",")){
-  if(str.includes(", ") === false){
-    console.log("includes comma");
-    let temp = str;
-    temp = temp.split(",");
-    temp = temp.reverse();
-    temp = temp.join(",");
-    temp = str; 
-  }
+if(str.includes(", ")){
+  console.log("includes comma space");
+  let temp = str;
+  temp = temp.split(", ");
+  temp = temp.reverse();
+  temp = temp.join(",");
+
+}else if (str.includes(",")){
+  console.log("includes comma");
+  let temp = str;
+  temp = temp.split(",");
+  temp = temp.reverse();
+  temp = temp.join(",");
+  temp = str; 
 
 }else if(str.includes(";")){
   console.log("includes semicolon");
@@ -36,13 +41,6 @@ if (str.includes(",")){
   temp = temp.reverse();
   temp = temp.join(" ");
   str = temp;
-
-}else if(str.includes(", ")){
-  console.log("includes comma space");
-  let temp = str;
-  temp = temp.split(", ");
-  temp = temp.reverse();
-  temp = temp.join(",");
 }else{
   console.log("Something else");
 }
